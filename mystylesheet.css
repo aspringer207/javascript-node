@@ -1,0 +1,62 @@
+@import url(https://www.w3schools.com/w3css/4/w3.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+
+
+
+/* End extract */
+.w3-panel {
+    background-color: #2196F3;
+}
+
+button.w3-button {
+    background-color: #2196F3;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: large;
+    font-weight: 600;
+}
+
+button.w3-button:hover {
+    background-color: #0b7dda !important;
+}
+iconify-icon.myinline {
+    min-width: 48px;
+    
+}
+
+.paypallink {
+    background-color: #f3c221 !important;
+    color: rgb(0, 0, 0) !important;
+    padding: 8px 16px;
+    border: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+div.collapse:not(.show) {
+   
+    display: none;
+  
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  ;
+}
+div.collapsing:not(.collapse) {
+	transition-duration:1s; 
+	transition-timing-function: linear; 
+	transition-property:all;
+}

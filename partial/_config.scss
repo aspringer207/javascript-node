@@ -1,0 +1,89 @@
+// w3css
+@import url("https://www.w3schools.com/w3css/4/w3.css");
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+// values applicables to every element by default
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+// variables colors
+$beemerbrightblue: #10b6e0;
+$beemerdarkblue: #0381a1;
+$beemerdarkgray: #5E5E5E;
+$beemerlightgray: #919191;
+$beemergray: #757575;
+$beemerblack: #1B1B1B;
+$beemerwhite: #F6F6F6;
+
+
+// variables containers width for different screen sizes
+$container-lg: 82%;
+$container-md: 90%;
+$beemerlight1: #ebfbff;
+$beemerlight2: #bbf0fe;
+$beemerlight3: #77e2fc;
+$beemerlight4: #33d3fb;
+$beemerlight5: #05b7e4;
+$beemerbright: #10b6e0;
+$beemervivid: #0381a1;
+$beemerdark5: #037490;
+$beemerdark4: #036780;
+$beemerdark3: #025a70;
+$beemerdark2: #024d60;
+$beemerdark1: #024050;
+
+$beemerblack: #161616;
+$beemerwhite: #f3f6f9;
+
+
+$darkbeemer: #085b70;
+.trtheme {height: 60px;}
+.tdtheme {height: 60px;
+    width: 60px;
+    border: 3px solid #161616
+}
+
+.theme-beemerlight1 {color:#161616 !important; background-color:#ebfbff !important}
+.theme-beemerlight2 {color:#161616 !important; background-color:#bbf0fe !important}
+.theme-beemerlight3 {color:#161616 !important; background-color:#77e2fc !important}
+.theme-beemerlight4 {color:#161616 !important; background-color:#33d3fb !important}
+.theme-beemerlight5 {color:#eee !important; background-color:#05b7e4 !important}
+.theme-beemerbright {color:#eee !important; background-color:#10b6e0 !important}
+.theme-beemervivid {color:#eee !important; background-color:#0381a1 !important}
+.theme-beemerdark5 {color:#eee !important; background-color:#037490 !important}
+.theme-beemerdark4 {color:#eee !important; background-color:#036780 !important}
+.theme-beemerdark3 {color:#eee !important; background-color:#025a70 !important}
+.theme-beemerdark2 {color:#eee !important; background-color:#024d60 !important}
+.theme-beemerdark1 {color:#eee !important; background-color:#024050 !important}
+
+.theme-l5 {color:$beemervivid !important; background-color:#f0fbfe !important}
+.theme-l4 {color:$beemerdark1 !important; background-color:#ccf2fb !important}
+.theme-l3 {color:$beemerdark1 !important; background-color:#9ae5f8 !important}
+.theme-l2 {color:$beemerdark1 !important; background-color:#67d8f4 !important}
+.theme-l1 {color:#eee !important; background-color:#35cbf1 !important}
+.theme-d1 {color:#eee !important; background-color:#0ea4ca !important}
+.theme-d2 {color:#eee !important; background-color:#0c92b3 !important}
+.theme-d3 {color:#eee !important; background-color:#0b809d !important}
+.theme-d4 {color:#eee !important; background-color:#096d86 !important}
+.theme-d5 {color:#eee !important; background-color:#085b70 !important}
+
+.theme-light {color:#161616 !important; background-color:#f0fbfe !important}
+.theme-dark {color:#eee !important; background-color:#085b70 !important}
+.theme-action {color:#eee !important; background-color:#085b70 !important}
+
+.theme-beemer-bg {color:#eee !important; background-color:#10b6e0 !important}
+.text-beemer {color:#10b6e0 !important}
+.border-theme {border-color:#10b6e0 !important}
+
+.hover-theme:hover {color:#eee !important; background-color:#10b6e0 !important}
+.hover-text-theme:hover {color:#10b6e0 !important}
+.hover-border-theme:hover {border-color:#10b6e0 !important}
+@import "../node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300%3B0,9..40,600%3B1,9..40,300%3B1,9..40,600&family=Roboto+Condensed:ital,wght@0,700%3B1,700&display=swap');
+@import url('https://www.w3schools.com/w3css/4/w3.css'); 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* ================== GENERAL TAGS SETTINGS ======================= */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.5;
+    color: rgba(12, 3, 27, 0.7);
+    background: rgba(76, 201, 240, 0.1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container {
+    width: 82%;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {font-family: "Roboto Condensed", sans-serif;
+    line-height: 1.2;
+}
+
+section {
+    margin-top: 6rem;
+}
+
+    section > h2 {
+        text-align: center;
+    }
+
+    section > p {
+        text-align: center;
+        width: 42%;
+        margin: 0.6rem auto 2.5rem;
+    }
+
+.btn {
+    font-family: "Roboto Condensed", sans-serif;
+    display: inline-block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.75rem 1rem;
+    border-radius: 0.4rem;
+    background: #f72585;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+    .btn:hover {
+        background: #f84c9b;
+        box-shadow: 0 1rem 1.6rem rgba(12, 3, 27, 0.15);
+    }
+
+.btn-primary {
+    display: inline-block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.75rem 1rem;
+    border-radius: 0.4rem;
+    background: #480ca8;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+    .btn-primary:hover {
+        background: #580fce;
+        box-shadow: 0 1rem 1.6rem rgba(12, 3, 27, 0.15);
+    }
+input, select {background-color: #808080; color: #151820; font-family: "DM Sans",sans-serif; font-display:swap;}
+
+/* ================== MEDIA QUERIES (MEDIUM SCREENS) ======================= */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    section > p {
+        width: 55%;
+    }
+}
+/* ================== MEDIA QUERIES (SMALL SCREENS) ======================= */
+@media screen and (max-width: 600px) {
+    section > p {
+        width: 90%;
+    }
+}
+/*# sourceMappingURL=style.css.map */

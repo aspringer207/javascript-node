@@ -1,0 +1,23 @@
+@use "sass:color";
+@use "sass:math";
+@use "sass:map";
+@use "sass:meta";
+@use "sass:string";
+@use "sass:selector";
+@use "sass:list";
+
+$lg: #cbcbcb;
+$mg: #919191;
+$dg: #595959;
+$bb: #10b5df;
+$db: #0381a1;
+$dark: #161616;
+$light: #e0f1f1;
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/code";
+@import "node_modules/bootstrap/scss/grid";

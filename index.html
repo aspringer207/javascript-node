@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_sass_starter_template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="mystylesheet.css"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="d-flex row flex-row align-items-start">
+        <div class="col-3" id="mysidebar" role="tabpanel">
+            <h3>Long Level Beemers</h3>
+            <div class="nav flex-column nav-tabs gap-2 " role="tablist" id="v-tabs-tab">
+                <button class="nav-link btn btn-info active" id="v-tabs-info-tab" data-bs-toggle="tab"
+                    data-bs-target="#v-tabs-info" type="button" role="tab" aria-controls="v-tabs-info"
+                    aria-selected="true">Info</button>
+                <button class="nav-link btn btn-info" id="v-tabs-returning-tab" data-bs-toggle="tab"
+                    data-bs-target="#v-tabs-returning" type="button" role="tab" aria-controls="v-tabs-returning"
+                    aria-selected="false">Returning Members</button>
+                <button class="nav-link btn btn-info" id="v-tabs-new-tab" data-bs-toggle="tab"
+                    data-bs-target="#v-tabs-new" type="button" role="tab" aria-controls="v-tabs-new"
+                    aria-selected="false">
+                    New Members</button>
+            </div>
+            <div class="d-grid gap-2">
+                <a class="btn btn-warning" id="v-tabs-paypal" role="link"
+                    href="https://www.paypal.com/paypalme/longlevelbeemers" rel="noopener" target="_blank">
+                    <iconify-icon class="mt-o" icon="logos:paypal"></iconify-icon>
+                    Pay Dues</a>
+            </div>
+        </div>
+        <div class="tab-content flex-column col-9" id="v-tabs-tabContent">
+            <div class="container tab-pane fade show active" id="v-tabs-info" role="tabpanel" aria-labelledby="v-tabs-info-tab">
+                <div #info>
+                    <div>
+                        <h1>
+                            Membership applications and renewals
+                        </h1>
+                    </div>
+                    <div>
+                        <p> Annual Dues are $20.00 for Individuals, $30.00 for family 
+                            Payable on PayPal (Please use Friend, not Business) 
+                            <br> OR <br>
+                            Send checks payable to Long Level Beemers Mail to: Jan Moolenschot, 9245 Shelly Drive, Marcy, NY 13403!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container tab-pane fade" id="v-tabs-returning" role="tabpanel" aria-labelledby="v-tabs-returning-tab">
+                <div #returningmembers>
+                    <div #rmcontent>
+                        <div #mypanel>
+                            <h1>
+                                Time to renew your membership?
+                            </h1>
+                        </div>
+                        <form id="rmform" #rmform method="POST" action="rmform.php">
+                            <div #memberinput class="form-group">
+                                <div class="form-group row">
+                                    <div #myitem class="col-6">
+                                        <iconify-icon class="myinline" icon="emojione:name-badge">
+
+                                        </iconify-icon>
+                                        <label class="form-label">
+                                            Name
+                                            <input class="form-control" required #rname name="MName" type="text"
+                                                autocomplete="name" />
+                                        </label>
+                                    </div>
+                                    <div #myitem class="col-6">
+                                        <iconify-icon class="myinline" icon="flat-color-icons:address-book">
+
+                                        </iconify-icon>
+                                        <label class="form-label">
+                                            Email
+                                            <input class="form-control" required #remail name="MEmail" type="email"
+                                                autocomplete="email" />
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div #myitem class="col-6">
+                                        <iconify-icon class="myinline" icon="emojione:mobile-phone">
+
+                                        </iconify-icon>
+                                        <label class="form-label">
+                                            Phone
+                                            <input class="form-control" required #rphone name="MPhone" type="tel"
+                                                autocomplete="tel" />
+                                        </label>
+                                    </div>
+                                    <div #myitem class="col-6">
+                                        <iconify-icon class="myinline"
+                                            icon="fluent-emoji-flat:motorcycle"></iconify-icon>
+                                        <label class="form-label">
+                                            Membership Type
+                                            <select class="form-select" required #mtype name="MType">
+                                                <option class="form-select" #rindividual>Individual</option>
+                                                <option class="form-select" #rfamily>Family</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div #myitem class="col-6">
+                                        <label class="form-label" #rdues>
+                                            How are you planning to pay dues for the year?
+                                            <select class="form-select" required #rpaymethod name="MemberPaymentMethod">
+                                                <option class="form-select" #rpaypal name="MemberPayMethod">
+                                                    PayPal
+                                                </option>
+                                                <option class="form-select" #rcheck name="MemberPayMethod">
+                                                    Check (Mailed)
+                                                </option>
+                                                <option class="form-select" #rcash name="MemberPayMethod">
+                                                    Cash
+                                                </option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div #myitem class="col-6">
+                                        <label class="form-label">
+                                            When are you planning to pay dues for the year?
+                                            <input class="form-control" required #rexpectedpaydate
+                                                name="ExpectedPayDate" type="date" />
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button #rsubmit class="submit-button btn btn-info my-3 form-control"
+                                type="submit">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container tab-pane fade flex-column" id="v-tabs-new" role="tabpanel" aria-labelledby="v-tabs-new-tab">
+                <div #newmembers class="flex-column">
+
+                    <div #nmcontent>
+                        <div #mypanel>
+                            <h1>
+                                Join now, and we'll see you on the next adventure!
+                            </h1>
+                        </div>
+
+                        <form #nmform id="nmform" method="POST" action>
+                            <h3>General Information</h3>
+                            <div class="row">
+                                <label class="form-label col-4">
+                                    Name
+                                    <input class="form-control" required #nname name="nName" type="text"
+                                        autocomplete="name" />
+                                </label>
+                                <label class="form-label col-4">
+                                    Email
+                                    <input class="form-control" required #nemail name="nEmail" type="email"
+                                        autocomplete="email" />
+                                </label>
+                                <label class="form-label col-4">
+                                    Phone Number
+                                    <input class="form-control" required #nphone name="nPhone" type="tel"
+                                        autocomplete="tel" />
+                                </label>
+                            </div>
+                            <div class="row">
+                                <label class="form-label col-6">
+                                    Home Address Line 1
+                                    <input #a1a class="form-control" required type="text" autocomplete="address-line1"
+                                        name="homeaddress" />
+                                </label>
+                                <label class="form-label col-6">
+                                    Home Address Line 2
+                                    <input #a1b class="form-control" required type="text" autocomplete="address-line2"
+                                        name="homeaddress" />
+                                </label>
+                            </div>
+                            <div class="row">
+                                <label class="form-label col-4">
+                                    City
+                                    <input class="form-control" required #city1 type="text" name="homecity"
+                                        autocomplete="address-level2" />
+                                </label>
+                                <label class="form-label col-4">
+                                    State
+                                    <select class="form-select" required #state1 name="homestate">
+                                        <option name="State1" id="Alabama1" value="Alabama">
+                                            Alabama
+                                        </option>
+                                        <option name="State1" id="Alaska1" value="Alaska">
+                                            Alaska
+                                        </option>
+                                        <option name="State1" id="Arizona1" value="Arizona">
+                                            Arizona
+                                        </option>
+                                        <option name="State1" id="Arkansas1" value="Arkansas">
+                                            Arkansas
+                                        </option>
+                                        <option name="State1" id="California1" value="California">
+                                            California
+                                        </option>
+                                        <option name="State1" id="Colorado1" value="Colorado">
+                                            Colorado
+                                        </option>
+                                        <option name="State1" id="Connecticut1" value="Connecticut">
+                                            Connecticut
+                                        </option>
+                                        <option name="State1" id="Delaware1" value="Delaware">
+                                            Delaware
+                                        </option>
+                                        <option name="State1" id="Florida1" value="Florida">
+                                            Florida
+                                        </option>
+                                        <option name="State1" id="Georgia1" value="Georgia">
+                                            Georgia
+                                        </option>
+                                        <option name="State1" id="Hawaii1" value="Hawaii">
+                                            Hawaii
+                                        </option>
+                                        <option name="State1" id="Idaho1" value="Idaho">
+                                            Idaho
+                                        </option>
+                                        <option name="State1" id="Illinois1" value="Illinois">
+                                            Illinois
+                                        </option>
+                                        <option name="State1" id="Indiana1" value="Indiana">
+                                            Indiana
+                                        </option>
+                                        <option name="State1" id="Iowa1" value="Iowa">
+                                            Iowa
+                                        </option>
+                                        <option name="State1" id="Kansas1" value="Kansas">
+                                            Kansas
+                                        </option>
+                                        <option name="State1" id="Kentucky1" value="Kentucky">
+                                            Kentucky
+                                        </option>
+                                        <option name="State1" id="Louisiana1" value="Louisiana">
+                                            Louisiana
+                                        </option>
+                                        <option name="State1" id="Maine1" value="Maine">
+                                            Maine
+                                        </option>
+                                        <option name="State1" id="Maryland1" value="Maryland">
+                                            Maryland
+                                        </option>
+                                        <option name="State1" id="Massachusetts1" value="Massachusetts">
+                                            Massachusetts
+                                        </option>
+                                        <option name="State1" id="Michigan1" value="Michigan">
+                                            Michigan
+                                        </option>
+                                        <option name="State1" id="Minnesota1" value="Minnesota">
+                                            Minnesota
+                                        </option>
+                                        <option name="State1" id="Mississippi1" value="Mississippi">
+                                            Mississippi
+                                        </option>
+                                        <option name="State1" id="Missouri1" value="Missouri">
+                                            Missouri
+                                        </option>
+                                        <option name="State1" id="Montana1" value="Montana">
+                                            Montana
+                                        </option>
+                                        <option name="State1" id="Nebraska1" value="Nebraska">
+                                            Nebraska
+                                        </option>
+                                        <option name="State1" id="Nevada1" value="Nevada">
+                                            Nevada
+                                        </option>
+                                        <option name="State1" id="New Hampshire1" value="New Hampshire">
+                                            New Hampshire
+                                        </option>
+                                        <option name="State1" id="New Jersey1" value="New Jersey">
+                                            New Jersey
+                                        </option>
+                                        <option name="State1" id="New Mexico1" value="New Mexico">
+                                            New Mexico
+                                        </option>
+                                        <option selected name="State1" id="New York1" value="New York">
+                                            New York
+                                        </option>
+                                        <option name="State1" id="North Carolina1" value="North Carolina">
+                                            North Carolina
+                                        </option>
+                                        <option name="State1" id="North Dakota1" value="North Dakota">
+                                            North Dakota
+                                        </option>
+                                        <option name="State1" id="Ohio1" value="Ohio">
+                                            Ohio
+                                        </option>
+                                        <option name="State1" id="Oklahoma1" value="Oklahoma">
+                                            Oklahoma
+                                        </option>
+                                        <option name="State1" id="Oregon1" value="Oregon">
+                                            Oregon
+                                        </option>
+                                        <option name="State1" id="Pennsylvania1" value="Pennsylvania">
+                                            Pennsylvania
+                                        </option>
+                                        <option name="State1" id="Rhode Island1" value="Rhode Island">
+                                            Rhode Island
+                                        </option>
+                                        <option name="State1" id="South Carolina1" value="South Carolina">
+                                            South Carolina
+                                        </option>
+                                        <option name="State1" id="South Dakota1" value="South Dakota">
+                                            South Dakota
+                                        </option>
+                                        <option name="State1" id="Tennessee1" value="Tennessee">
+                                            Tennessee
+                                        </option>
+                                        <option name="State1" id="Texas1" value="Texas">
+                                            Texas
+                                        </option>
+                                        <option name="State1" id="Utah1" value="Utah">
+                                            Utah
+                                        </option>
+                                        <option name="State1" id="Vermont1" value="Vermont">
+                                            Vermont
+                                        </option>
+                                        <option name="State1" id="Virginia1" value="Virginia">
+                                            Virginia
+                                        </option>
+                                        <option name="State1" id="Washington1" value="Washington">
+                                            Washington
+                                        </option>
+                                        <option name="State1" id="West Virginia1" value="West Virginia">
+                                            West Virginia
+                                        </option>
+                                        <option name="State1" id="Wisconsin1" value="Wisconsin">
+                                            Wisconsin
+                                        </option>
+                                        <option name="State1" id="Wyoming1" value="Wyoming">
+                                            Wyoming
+                                        </option>
+                                    </select>
+                                </label>
+                                <label class="form-label col-4" for="nzipcode">
+                                    Zip Code
+                                    <input class="form-control" #nzipcode id="nzipcode" required type="text"
+                                        name="zipcode" />
+                                </label>
+                            </div>
+                            <fieldset class="alert alert-primary" #address-info>
+                                <legend class="h3">Address Info</legend>
+
+                                <div class="form-check">
+                                    <label class="form-check-label" for="address-single"><input class="btn btn-radio"
+                                            data-bs-toggle="collapse" data-bs-target="#mailingaddress" type="radio"
+                                            name="exampleRadios" id="address-single"
+                                            value="My home address is my mailing address." checked
+                                            aria-controls="mailingaddress">
+
+                                        My home address is my mailing address.
+                                    </label>
+                                </div>
+                                <div class="form-check"><label class="form-check-label" for="address-multiple"
+                                        aria-controls="mailingaddress">
+                                        <input class="btn btn-radio" data-bs-toggle="collapse"
+                                            data-bs-target="#mailingaddress" type="radio" name="AddressInfo"
+                                            id="address-multiple" value="I use a different mailing address"
+                                            aria-controls="mailingaddress">
+
+                                        I use a different mailing address.
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="collapse" id="mailingaddress">
+                                <div class="row">
+                                    <label class="form-label col-6">
+                                        Home Address Line 1
+                                        <input class="form-control" id="a2a" #a2a type="text"
+                                            autocomplete="address-line2" name="homeaddress" />
+                                    </label>
+                                    <label class="form-label col-6">
+                                        Home Address Line 2
+                                        <input class="form-control" id="a2b" #a2b type="text"
+                                            autocomplete="address-line2" name="homeaddress" />
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <label class="form-label col-4">
+                                        City
+                                        <input class="form-control" id="city2" #city2 type="text" name="homecity"
+                                            autocomplete="address-level2" />
+                                    </label>
+                                    <label class="form-label col-4">
+                                        State
+                                        <select class="form-select" #state2 name="homestate">
+                                            <option name="State2" id="Alabama2" value="Alabama">
+                                                Alabama
+                                            </option>
+                                            <option name="State2" id="Alaska2" value="Alaska">
+                                                Alaska
+                                            </option>
+                                            <option name="State2" id="Arizona2" value="Arizona">
+                                                Arizona
+                                            </option>
+                                            <option name="State2" id="Arkansas2" value="Arkansas">
+                                                Arkansas
+                                            </option>
+                                            <option name="State2" id="California2" value="California">
+                                                California
+                                            </option>
+                                            <option name="State2" id="Colorado2" value="Colorado">
+                                                Colorado
+                                            </option>
+                                            <option name="State2" id="Connecticut2" value="Connecticut">
+                                                Connecticut
+                                            </option>
+                                            <option name="State2" id="Delaware2" value="Delaware">
+                                                Delaware
+                                            </option>
+                                            <option name="State2" id="Florida2" value="Florida">
+                                                Florida
+                                            </option>
+                                            <option name="State2" id="Georgia2" value="Georgia">
+                                                Georgia
+                                            </option>
+                                            <option name="State2" id="Hawaii2" value="Hawaii">
+                                                Hawaii
+                                            </option>
+                                            <option name="State2" id="Idaho2" value="Idaho">
+                                                Idaho
+                                            </option>
+                                            <option name="State2" id="Illinois2" value="Illinois">
+                                                Illinois
+                                            </option>
+                                            <option name="State2" id="Indiana2" value="Indiana">
+                                                Indiana
+                                            </option>
+                                            <option name="State2" id="Iowa2" value="Iowa">
+                                                Iowa
+                                            </option>
+                                            <option name="State2" id="Kansas2" value="Kansas">
+                                                Kansas
+                                            </option>
+                                            <option name="State2" id="Kentucky2" value="Kentucky">
+                                                Kentucky
+                                            </option>
+                                            <option name="State2" id="Louisiana2" value="Louisiana">
+                                                Louisiana
+                                            </option>
+                                            <option name="State2" id="Maine2" value="Maine">
+                                                Maine
+                                            </option>
+                                            <option name="State2" id="Maryland2" value="Maryland">
+                                                Maryland
+                                            </option>
+                                            <option name="State2" id="Massachusetts2" value="Massachusetts">
+                                                Massachusetts
+                                            </option>
+                                            <option name="State2" id="Michigan2" value="Michigan">
+                                                Michigan
+                                            </option>
+                                            <option name="State2" id="Minnesota2" value="Minnesota">
+                                                Minnesota
+                                            </option>
+                                            <option name="State2" id="Mississippi2" value="Mississippi">
+                                                Mississippi
+                                            </option>
+                                            <option name="State2" id="Missouri2" value="Missouri">
+                                                Missouri
+                                            </option>
+                                            <option name="State2" id="Montana2" value="Montana">
+                                                Montana
+                                            </option>
+                                            <option name="State2" id="Nebraska2" value="Nebraska">
+                                                Nebraska
+                                            </option>
+                                            <option name="State2" id="Nevada2" value="Nevada">
+                                                Nevada
+                                            </option>
+                                            <option name="State2" id="New Hampshire2" value="New Hampshire">
+                                                New Hampshire
+                                            </option>
+                                            <option name="State2" id="New Jersey2" value="New Jersey">
+                                                New Jersey
+                                            </option>
+                                            <option name="State2" id="New Mexico2" value="New Mexico">
+                                                New Mexico
+                                            </option>
+                                            <option selected name="State2" id="New York2" value="New York">
+                                                New York
+                                            </option>
+                                            <option name="State2" id="North Carolina2" value="North Carolina">
+                                                North Carolina
+                                            </option>
+                                            <option name="State2" id="North Dakota2" value="North Dakota">
+                                                North Dakota
+                                            </option>
+                                            <option name="State2" id="Ohio2" value="Ohio">
+                                                Ohio
+                                            </option>
+                                            <option name="State2" id="Oklahoma2" value="Oklahoma">
+                                                Oklahoma
+                                            </option>
+                                            <option name="State2" id="Oregon2" value="Oregon">
+                                                Oregon
+                                            </option>
+                                            <option name="State2" id="Pennsylvania2" value="Pennsylvania">
+                                                Pennsylvania
+                                            </option>
+                                            <option name="State2" id="Rhode Island2" value="Rhode Island">
+                                                Rhode Island
+                                            </option>
+                                            <option name="State2" id="South Carolina2" value="South Carolina">
+                                                South Carolina
+                                            </option>
+                                            <option name="State2" id="South Dakota2" value="South Dakota">
+                                                South Dakota
+                                            </option>
+                                            <option name="State2" id="Tennessee2" value="Tennessee">
+                                                Tennessee
+                                            </option>
+                                            <option name="State2" id="Texas2" value="Texas">
+                                                Texas
+                                            </option>
+                                            <option name="State2" id="Utah2" value="Utah">
+                                                Utah
+                                            </option>
+                                            <option name="State2" id="Vermont2" value="Vermont">
+                                                Vermont
+                                            </option>
+                                            <option name="State2" id="Virginia2" value="Virginia">
+                                                Virginia
+                                            </option>
+                                            <option name="State2" id="Washington2" value="Washington">
+                                                Washington
+                                            </option>
+                                            <option name="State2" id="West Virginia2" value="West Virginia">
+                                                West Virginia
+                                            </option>
+                                            <option name="State2" id="Wisconsin2" value="Wisconsin">
+                                                Wisconsin
+                                            </option>
+                                            <option name="State2" id="Wyoming2" value="Wyoming">
+                                                Wyoming
+                                            </option>
+                                        </select>
+                                    </label>
+                                    <label class="form-label col-4" for="nzipcode2">
+                                        Zip Code
+                                        <input class="form-control" id="nzipcode2" #nzipcode2 type="text"
+                                            name="zipcode" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <h3>Other Memberships</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="input-group">
+                                        <label class="input-group-text" for="ramember">
+                                            RA</label>
+                                        <div class="input-group-text"><input class="form-check-input mt-0" #ramember
+                                                name="RAMember" id="ramember" type="checkbox" aria-label="RAMember" />
+                                        </div>
+                                        <input class="form-control" #ranumber name="RANumber" aria-label="RANumber"
+                                            type="text" />
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="input-group">
+                                        <label class="input-group-text" for="moamember">
+                                            MOA</label>
+                                        <div class="input-group-text">
+                                            <input class="mt-0 form-check-input" #moamember id="moamember"
+                                                name="MOAMember" aria-label="MOAMember" type="checkbox" />
+                                        </div>
+                                        <input #moanumber class="form-control" name="MOANumber" aria-label="MOANumber"
+                                            type="text" />
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="input-group">
+                                        <label class="input-group-text" for="amamember">
+                                            AMA </label>
+                                        <div class="input-group-text">
+                                            <input class="mt-0 form-check-input" #amamember id="amamember"
+                                                name="AMAMember" aria-label="amamember" type="checkbox" />
+                                        </div>
+                                        <input class="form-control" #amanumber name="AMANumber" aria-label="AMANumber"
+                                            type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h3>Membership Preferences</h3>
+                                <label class="form-label" #nmembershiptype>
+                                    Which type of membership suits your needs?
+                                    <select class="form-select" required #nmembershiptype name="nMembershipType">
+                                        <option #nindividual name="nMembershipType" value="Individual">Individual
+                                        </option>
+                                        <option #nfamily name="nMembershipType" value="Family">Family</option>
+                                    </select>
+                                </label>
+                                <label class="form-label">
+                                    Please select the types of rides you'd like to join
+                                    <select class="form-select" required #ridinginterests name="RidingInterests"
+                                        multiple>
+                                        <option #intcas name="RidingInterests" value="Casual">
+                                            Casual
+                                        </option>
+                                        <option #intadv name="RidingInterests" value="Adventure">
+                                            Adventure
+                                        </option>
+                                        <option #intloc name="RidingInterests" value="Local">
+                                            Local
+                                        </option>
+                                        <option #intdis name="RidingInterests" value="Distance">
+                                            Distance
+                                        </option>
+                                        <option #intoth name="RidingInterests" value="Other">
+                                            Other
+                                        </option>
+                                    </select>
+                                </label>
+                                <label>
+                                    If you selected 'Other', please specify
+                                    <input #ridinginterestsother name="RidingInterests" type="text" />
+                                </label>
+                            </div>
+                            <button class="newmembersubmit btn btn-info my-3 form-control" #nsubmit
+                                type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var tabs = document.querySelectorAll(".tab");
+        var tabcontent = document.querySelectorAll(".tab-pane");
+        var container = document.querySelector(".container");
+        var activetabcontent = container.querySelectorAll(".active");
+        var current = $(this).activetabcontent;
+        var currentform = current.querySelector("form");
+        var currentsubmitbutton = current.querySelectorAll(".submit-button");
+        $.validator.setDefaults({
+            submitHandler: function () {
+                alert("Thank you for your submission!");
+            }
+        })
+        onclick(function () {
+
+
+            var thisID = currentsubmitbutton.attr("id");
+            toString(thisID);
+            if (thisID == "#rsubmit") {
+                $("#rform").validate({
+                    rules: {
+                        "rname": {
+                            required: true,
+                            minlength: 2
+                        }, "remail": {
+                            required: true,
+                            email: true
+                        },
+                        "rphone": {
+                            required: true,
+                            phoneUS: true
+                        },
+                        "rpaymethod": {
+                            required: true
+                        },
+                        "rexpectedpaydate": {
+                            required: true
+                        }
+                    },
+
+                    messages: {
+                        "rname": "Please enter your name",
+                        "remail": "Please enter your email",
+                        "rphone": "Please enter a valid phone number",
+                        "rpaymethod": "Please select a payment method",
+                        "rexpectedpaydate": "Please select an expected pay date"
+                    },
+                    errorElement: "em",
+                    errorPlacement: function (error, element) {
+                        error.addClass("help-block");
+                        error.insertAfter(element);
+                    },
+                    highlight: function (element, errorClass, validClass) {
+                        $(element).parents.addClass("alert-error").removeClass("alert-success");
+                    },
+                    unhighlight: function (element, errorClass, validClass) {
+                        $(element).parents.removeClass("alert-error").addClass("alert-success");
+                    }
+                }
+                );
+            }
+            else if (thisId == "nsubmit") {
+                $("#nform").validate({
+                    rules: {
+                        "nName": {
+                            required: true,
+                            minlength: 2
+                        },
+                        "nEmail": {
+                            required: true,
+                            email: true
+                        },
+                        "nPhone": {
+                            required: true,
+                            phoneUS: true
+                        },
+                        "a1a": {
+                            required: true,
+                            minlength: 2
+                        },
+
+                        "city1": {
+                            required: true,
+                            minlength: 2
+                        },
+                        "zip1": {
+                            required: true,
+                            digits: true,
+                            minlength: 5,
+                            maxlength: 5
+                        },
+                        "a2a": {
+                            required: function (element) {
+                                return $("address-multiple").is(":checked");
+                            }
+                        },
+
+                        "city2": {
+                            required: function (element) {
+                                return $("address-multiple").is(":checked");
+                            }
+                        },
+                        "zip2": {
+                            required: function (element) {
+                                return $("address-multiple").is(":checked");
+                            },
+                            digits: true,
+                            minlength: 5,
+                            maxlength: 5
+                        },
+                        "nmembershiptype": {
+                            required: true
+                        },
+                        "ridinginterests": {
+                            required: true
+                        },
+                        "ridinginterestsother": {
+                            required: function (element) {
+                                return $("intoth").is(":checked");
+                            }
+                        }
+
+                    },
+                    messages: {
+                        "nName": "Please enter your name.",
+                        "nEmail": "Please enter a valid email address.",
+                        "nPhone": "Please enter a valid phone number.",
+                        "a1a": "Please enter your home address.",
+                        "city1": "Please enter your city.",
+                        "zip1": "Please enter a valid zip code.",
+                        "a2a": "Please enter your mailing address.",
+                        "city2": "Please enter a city for your mailing address.",
+                        "zip2": "Please enter a valid zip code for your mailing address.",
+                        "nmembershiptype": "Please select a membership type.",
+                        "ridinginterests": "Please select at least one riding interest.",
+                        "ridinginterestsother": "If you selected 'Other', please specify."
+                    },
+                    errorElement: "em",
+                    errorPlacement: function (error, element) {
+                        error.addClass("help-block");
+                        error.insertAfter(element);
+                    },
+                    highlight: function (element, errorClass, validClass) {
+                        $(element).parents.addClass("alert-error").removeClass("alert-success");
+                    },
+                    unhighlight: function (element, errorClass, validClass) {
+                        $(element).parents.removeClass("alert-error").addClass("alert-success");
+                    }
+
+
+                });
+            }
+            else {
+                $console.log("error")
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        const tabs = document.querySelectorAll(".tab");
+        const tabcontent = document.querySelectorAll(".tab-pane");
+        const container = document.querySelector(".container");
+        const activetabcontent = container.querySelectorAll(".active");
+        const current = $(this).activetabcontent;
+        const currentform = current.querySelector("form");
+        currentform.on("submit", function( event ) {
+            console.log(currentform.serializeArray());
+            event.preventDefault();
+        });
+        
+    </script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery-form@4.3.0/dist/jquery.form.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
